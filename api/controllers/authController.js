@@ -1,6 +1,6 @@
 var passport = require('passport');
 var User = require('../models/user');
-var secret = require('');
+var secret = process.env.DEVIGNER_APP_SECRET;
 var jwt = require('jsonwebtoken');
 
 function signup(req, res, next ){

@@ -18,7 +18,7 @@ var secret = process.env.DEVIGNER_APP_SECRET;
 
 
 // connecting the DB
-mongoose.connect(process.env.MONGOLAB_URI || 'mongodb:/localhost:27017/devigner-app');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost:27017/devigner-app');
 
 // requiring passport
 
