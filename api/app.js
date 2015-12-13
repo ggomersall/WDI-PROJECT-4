@@ -13,6 +13,7 @@ var app            = express();
 
 
 var User = require('./models/user');
+var Idea = require('./models/idea');
 
 var secret = process.env.DEVIGNER_APP_SECRET;
 
