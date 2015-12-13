@@ -18,4 +18,4 @@ router.route('/users/:id')
   .delete(usersController.usersDelete)
 
 
-module.exports = router
+module.exports = router;
