@@ -9,13 +9,13 @@ router.post('/login', authController.login);
 router.post('/signup', authController.signup);
 
 router.route('/users')
-  .get(usersController.usersIndex)
+  .get(usersController.usersIndex);
 
 router.route('/users/:id')
-  .get(usersController.usersShow)
-  .put(usersController.usersUpdate)
-  .patch(usersController.usersUpdate)
-  .delete(usersController.usersDelete)
+  .get(usersController.userShow)
+  .put(usersController.userUpdate)
+  .patch(usersController.userUpdate)
+  .delete(usersController.userDelete);
 
 
 module.exports = router;
