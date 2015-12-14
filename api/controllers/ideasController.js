@@ -54,6 +54,7 @@ module.exports = {
   ideasIndex: ideasIndex,
   ideaShow: ideaShow,
   ideaCreate: ideaCreate,
-  ideaDelete: ideaDelete
+  ideaDelete: ideaDelete,
+  ideaUpdate: ideaUpdate
 }
 
