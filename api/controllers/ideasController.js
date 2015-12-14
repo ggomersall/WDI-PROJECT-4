@@ -1,4 +1,4 @@
-var Idea = require('../models/group') ;
+var Idea = require('../models/idea') ;
 
 function ideasIndex(req, res){
   Idea.find(function(err, ideas){
