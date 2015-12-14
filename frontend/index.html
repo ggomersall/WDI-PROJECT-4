@@ -39,8 +39,11 @@
       <!-- Collect the nav links, forms, and other content for toggling -->
       <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
         <ul class="nav navbar-nav navbar-right">
-          <li><a data-toggle="modal" data-target="#loginModal" ui-sref-active="active" ui-sref="home">Login</a></li>
-          <li><a ui-sref-active="active" ui-sref="signup">Sign Up</a></li>
+          <li><a data-toggle="modal" data-target="#loginModal" ui-sref-active="active" ui-sref="home" ng-hide="users.isLoggedIn()">Login</a></li>
+          <li><a ui-sref-active="active" ui-sref="signup" ng-hide="users.isLoggedIn()">Sign Up</a></li>
+          <li><a ui-sref-active="active" ui-sref="profile" ng-show="users.isLoggedIn()">profile</a></li>
+          <li><a ui-sref-active="active" ui-sref="home" ng-show="users.isLoggedIn()">logout</a></li>
+
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
