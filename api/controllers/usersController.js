@@ -7,14 +7,14 @@ function usersIndex(req, res) {
   });
 };
 
-function usersShow(req, res) {
+function userShow(req, res) {
   User.findById(req.params.id, function(err, user) {
     if (err) return res.status(404).json({ message: "Ooops,  something went wrong." });
     res.status(200).json({ user: user });
   });
 };
 
-function usersUpdate(req, res) {
+function userUpdate(req, res) {
   User.findById(req.params.id, function(err, user) {
     if(err) return res.status(500).json({ message: "Ooops,  something went wrong." });
     if(!user) return res.status(404).json({ message: "That user could not be found!" });
@@ -33,7 +33,7 @@ function usersUpdate(req, res) {
   });
 };
 
-function usersDelete(req, res) {
+function userDelete(req, res) {
   User.findByIdAndRemove({_id: req.params.id}, function(err) {
     if(err) return res.status(404).json({ message: "Ooops,  something went wrong." });
     res.status(200).json({ message: "User has been deleted!"});
@@ -44,7 +44,7 @@ function usersDelete(req, res) {
 
 module.exports = {
   usersIndex: usersIndex,
-  usersShow: usersShow,
-  usersUpdate: usersUpdate,
-  usersDelete: usersDelete
+  userShow: userShow,
+  userUpdate: userUpdate,
+  userDelete: userDelete
 }
