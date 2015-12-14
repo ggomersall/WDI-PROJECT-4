@@ -13,14 +13,9 @@ function MainRouter($stateProvider, $urlRouterProvider) {
         url: "/",
         templateUrl: "views/home.html",
       })
-      .state('products', {
+      .state('users', {
         url: "/users",
         templateUrl: "views/users.html",
-      })
-      .state('viewProduct', {
-        url: "/products/:id",
-        templateUrl: "views/product.html",
-        controller: 'ProductViewController'
       })
       .state('about', {
         url: "/about",
@@ -30,12 +25,8 @@ function MainRouter($stateProvider, $urlRouterProvider) {
         url: "/login",
         templateUrl: "views/login.html"
       })
-      .state('register', {
-        url: "/register",
-        templateUrl: "views/register.html",
+      .state('signup', {
+        url: "/signup",
+        templateUrl: "views/signup.html",
       })
-      .state('cart', {
-        url: "/cart",
-        templateUrl: "views/cart.html",
-      });
 }
