@@ -11,15 +11,15 @@ function MainRouter($stateProvider, $urlRouterProvider) {
   $stateProvider
       .state('home', {
         url: "/",
-        templateUrl: "views/home.html",
+        templateUrl: "views/home.html"
       })
       .state('users', {
         url: "/users",
-        templateUrl: "views/users.html",
+        templateUrl: "views/users.html"
       })
       .state('about', {
         url: "/about",
-        templateUrl: "views/about.html",
+        templateUrl: "views/about.html"
       })
       .state('login', {
         url: "/login",
@@ -27,6 +27,6 @@ function MainRouter($stateProvider, $urlRouterProvider) {
       })
       .state('signup', {
         url: "/signup",
-        templateUrl: "views/signup.html",
+        templateUrl: "views/signup.html"
       })
 }
