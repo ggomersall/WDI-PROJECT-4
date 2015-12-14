@@ -24,7 +24,7 @@ function signup(req, res, next ){
   return localStrategy(req, res, next);
 }
 
-function login(req, rds, next) {
+function login(req, res, next) {
   User.findOne({
     "local.email": req.body.email
   }, function(err, user) {
