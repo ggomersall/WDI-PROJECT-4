@@ -38,11 +38,11 @@ app.use(morgan('dev'));
 app.use(passport.initialize());
 app.use(cors());
 
-app.use('/api', expressJWT({ secret:secret })
+app.use('/api', expressJWT({ secret: secret })
   .unless({
     path: [
       { url: '/api/login', methods: ['POST'] },
-      { url: '/api/login', methods: ['POST'] }
+      { url: '/api/signup', methods: ['POST'] }
     ]
   }));
 
