@@ -11,31 +11,31 @@ function MainRouter($stateProvider, $urlRouterProvider) {
   $stateProvider
       .state('home', {
         url: "/",
-        templateUrl: "partials/home.html",
+        templateUrl: "views/home.html",
       })
       .state('products', {
         url: "/products",
-        templateUrl: "partials/products.html",
+        templateUrl: "views/products.html",
       })
       .state('viewProduct', {
         url: "/products/:id",
-        templateUrl: "partials/product.html",
+        templateUrl: "views/product.html",
         controller: 'ProductViewController'
       })
       .state('about', {
         url: "/about",
-        templateUrl: "partials/about.html",
+        templateUrl: "views/about.html",
       })
       .state('login', {
         url: "/login",
-        templateUrl: "partials/login.html"
+        templateUrl: "views/login.html"
       })
       .state('register', {
         url: "/register",
-        templateUrl: "partials/register.html",
+        templateUrl: "views/register.html",
       })
       .state('cart', {
         url: "/cart",
-        templateUrl: "partials/cart.html",
+        templateUrl: "views/cart.html",
       });
 }
