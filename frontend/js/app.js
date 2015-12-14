@@ -14,8 +14,8 @@ function MainRouter($stateProvider, $urlRouterProvider) {
         templateUrl: "views/home.html",
       })
       .state('products', {
-        url: "/products",
-        templateUrl: "views/products.html",
+        url: "/users",
+        templateUrl: "views/users.html",
       })
       .state('viewProduct', {
         url: "/products/:id",
