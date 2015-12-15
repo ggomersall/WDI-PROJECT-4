@@ -22,13 +22,13 @@ function UserController(User, TokenService, $location) {
   self.login = function() {
     User.login(self.user, handleLogin);
     // this redirects a user to certain path after login
-    // $location.path('/profile');
+    $location.path('/users');
 
   };
 
   self.signup = function() {
     User.signup(self.user, handleLogin);
-    // $location.path('/profile');
+    $location.path('/users');
   };
 
   self.logout = function() {
@@ -42,7 +42,7 @@ function UserController(User, TokenService, $location) {
   };
 
   self.isLoggedIn = function() {
-    $location.path('/users');
+    // $location.path('/users');
     return !!TokenService.getToken();
   }
 

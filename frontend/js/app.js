@@ -45,7 +45,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
     .state('login', {
       data: {'requiresLogin': false},
       params: { 
-        'toState': 'profile', // default state to proceed to after login
+        'toState': 'users', // default state to proceed to after login
         'toParams': {}
       },
       url: "/login",
@@ -54,7 +54,7 @@ function MainRouter($stateProvider, $urlRouterProvider) {
     .state('signup', {
       data: {'requiresLogin': false},
       params: { 
-        'toState': 'profile', // default state to proceed to after login
+        'toState': 'users', // default state to proceed to after login
         'toParams': {}
       },
       url: "/signup",
