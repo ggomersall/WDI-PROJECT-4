@@ -2,8 +2,8 @@ angular
   .module('devigner')
   .controller('usersController', UserController);
 
-UserController.$inject = ['User', 'TokenService'];
-function UserController(User, TokenService) {
+UserController.$inject = ['User', 'TokenService', '$location'];
+function UserController(User, TokenService, $location) {
   var self = this;
 
   self.all = [];
@@ -23,6 +23,7 @@ function UserController(User, TokenService) {
   self.login = function() {
     User.login(self.user, handleLogin);
     console.log(self.user)
+    $location.path('/profile');
 
   };
 
