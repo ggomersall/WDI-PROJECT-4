@@ -12,7 +12,6 @@ function TokenService($window, jwtHelper){
   }
 
   self.getToken = function(){
-    console.log('hello')
     return $window.localStorage.getItem('token');
   }
 

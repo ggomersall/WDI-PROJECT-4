@@ -39,8 +39,8 @@ function MainRouter($stateProvider, $urlRouterProvider) {
     })
     .state('profile', {
       url: '/profile',
-      templateUrl: '/views/profile.html',
-      authenticate: true
+      templateUrl: '/views/profile.html'
+      // authenticate: true
     })
     .state('login', {
       data: {'requiresLogin': false},
