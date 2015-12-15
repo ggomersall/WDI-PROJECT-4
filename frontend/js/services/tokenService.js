@@ -8,20 +8,22 @@ function TokenService($window, jwtHelper){
   var self = this;
 
   self.saveToken = function(token) {
-    return $window.localStorage.setItem('secret-handshake', token);
+    return $window.localStorage.setItem('token', token);
   }
 
   self.getToken = function(){
-    return $window.localStorage.getItem('secret-handshake');
+    console.log('hello')
+    return $window.localStorage.getItem('token');
   }
 
   self.removeToken = function(){
-    return $window.localStorage.removeItem('secret-handshake');
+    return $window.localStorage.removeItem('token');
   }
 
   self.decodeToken = function(){
     var token = self.getToken();
-    return token ? jwtHelper.decodeToken(token) : {};
+    return jwtHelper.decodeToken(token);
+    // return token ? jwtHelper.decodeToken(token) : {};
   }
 
 }

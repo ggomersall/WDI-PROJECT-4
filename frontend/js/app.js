@@ -23,10 +23,20 @@ function MainRouter($stateProvider, $urlRouterProvider) {
       templateUrl: "views/about.html"
     })
     .state('login', {
+      data: {'requiresLogin': false},
+      params: { 
+        'toState': 'profile', // default state to proceed to after login
+        'toParams': {}
+      },
       url: "/login",
       templateUrl: "views/login.html"
     })
     .state('signup', {
+      data: {'requiresLogin': false},
+      params: { 
+        'toState': 'profile', // default state to proceed to after login
+        'toParams': {}
+      },
       url: "/signup",
       templateUrl: "views/signup.html"
     })
