@@ -8,6 +8,8 @@ function UserController(User, TokenService, $location) {
 
   self.all = [];
   self.user = {};
+  self.whatever = {};
+  self.showUser = 'gareth'
 
   function handleLogin(res) {
     var token = res.token ? res.token : null;
@@ -43,6 +45,12 @@ function UserController(User, TokenService, $location) {
     });
   };
 
+  self.getUser = function(user) {
+    var data = User.get({id:user._id}, function() {
+      self.showUser = data.user;
+    });
+  }
+
   self.isLoggedIn = function() {
     // $location.path('/users');
     return !!TokenService.getToken();
@@ -52,7 +60,7 @@ function UserController(User, TokenService, $location) {
 
     self.getUsers();
     self.user = TokenService.decodeToken();
-    $location.path('/users');
+    // $location.path('/users');
   };
 
   return self;
