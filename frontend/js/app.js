@@ -37,9 +37,9 @@ function MainRouter($stateProvider, $urlRouterProvider) {
       url: "/about",
       templateUrl: "views/about.html"
     })
-    .state('profile', {
-      url: '/profile',
-      templateUrl: '/views/profile.html'
+    .state('user_show', {
+      url: '/users/:id',
+      templateUrl: '/views/user_show.html'
       // authenticate: true
     })
     .state('login', {

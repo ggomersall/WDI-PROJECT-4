@@ -38,7 +38,9 @@ function UserController(User, TokenService, $location) {
   };
 
   self.getUsers = function() {
-    self.all = User.query();
+    User.query( function(res){
+      self.all = res.users
+    });
   };
 
   self.isLoggedIn = function() {
@@ -47,8 +49,10 @@ function UserController(User, TokenService, $location) {
   }
 
   if(self.isLoggedIn()) {
+
     self.getUsers();
     self.user = TokenService.decodeToken();
+    $location.path('/users');
   };
 
   return self;

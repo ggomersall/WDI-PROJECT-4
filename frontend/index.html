@@ -41,7 +41,7 @@
         <ul class="nav navbar-nav navbar-right">
           <li><a data-toggle="modal" data-target="#loginModal" ui-sref-active="active" ui-sref="login" ng-hide="users.isLoggedIn()">Login</a></li>
           <li><a ui-sref-active="active" ui-sref="signup" ng-hide="users.isLoggedIn()">Sign Up</a></li>
-          <li><a ui-sref-active="active" ui-sref="profile" ng-show="users.isLoggedIn()">profile</a></li>
+          <li><a ui-sref-active="active" ui-sref="user_show" ng-show="users.isLoggedIn()">My Profile</a></li>
           <li><a ui-sref-active="active" ui-sref="home" ng-show="users.isLoggedIn()" ng-click="users.logout()">logout</a></li>
 
         </ul>
