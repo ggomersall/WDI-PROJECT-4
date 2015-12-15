@@ -4,7 +4,22 @@ angular
   .config(MainRouter)
   .config(function($httpProvider){
     $httpProvider.interceptors.push('authInterceptor');
-  });
+  })
+  .run(['$rootScope', '$state', 'LoginService',
+    function($rootScope, $state, LoginService) {
+
+      // Change title based on the `data` object in routes
+      $rootScope.$on('$stateChangeStart', function(event, toState, toParams, fromState, fromParams) {
+        var requiresLogin = toState.data.requiresLogin;
+
+        if (requiresLogin && !LoginService.check()) {
+          event.preventDefault();
+          $state.go('login', {'toState': toState.name, 'toParams': toParams});
+        }
+
+      });
+    }
+  ])
   
 
 MainRouter.$inject = ['$stateProvider', '$urlRouterProvider'];
